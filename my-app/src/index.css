@@ -12,9 +12,13 @@ code {
     monospace;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: rgb(5, 5, 56);
-  font-size: 40px;
+.container {
+  width: 1270px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
 }
