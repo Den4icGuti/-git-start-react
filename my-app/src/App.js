@@ -8,12 +8,9 @@ export default function App() {
     <div>
       {/* <PaintingList item={paintings}/> */}
       <Section title="Top">
+        <h1>Hello</h1>
         <PaintingList item={painting} />
       </Section>
-      <Section title='The best'>
-           <PaintingList item={painting} />
-      </Section>
-      
     </div>
   ); 
 }
