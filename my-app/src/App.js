@@ -8,7 +8,7 @@ export default function App() {
     <div>
       {/* <PaintingList item={paintings}/> */}
       <Section title="Top">
-        <PaintingList item={painting} />
+        <PaintingList item={painting123} />
       </Section>
       <Section title='The best'>
            <PaintingList item={painting} />
