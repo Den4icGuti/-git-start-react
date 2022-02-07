@@ -1,17 +1,24 @@
-import PropTypes from 'prop-types'
-import defaultImg from '../img/default-image.jpg'
+import PropTypes from 'prop-types';
+import defaultImg from './default-image.jpg';
+import  styles from './Painting.module.css'
 
 //===Создаем компонет дразметку для главного компонента,экспортируем в фаил главного компонента===//
 
 export default function Painting(props) {
-  const { imgUrl=defaultImg, title, authorName = 'unknown', proFileUrl, price, quantity } = props;
+  const { 
+   imgUrl = defaultImg,
+    title,
+    author,
+    price,
+    quantity
+  } = props;
 
   return (
-   <div className='box container'>
+    <div className={styles.card}>
       <img src={imgUrl} alt={title} width="300" height=""/>
       <h2>{title}</h2>
     <p>
-        Autor: <a href={proFileUrl}>{authorName}</a>
+        Autor: <a href={author}>{author}</a>
     </p>
       <p>Price: {price} credits</p>
       <p>Availability: {quantity < 10 ? 'ends' : 'mouth in stock'}</p>
@@ -24,8 +31,7 @@ export default function Painting(props) {
 Painting.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  authorName: PropTypes.string.isRequired,
-  proFileUrl: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   quantity:PropTypes.number.isRequired
 }

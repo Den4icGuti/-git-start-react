@@ -1,20 +1,20 @@
 import Painting from "./Painting";
 import PropTypes from 'prop-types'
-
+import styles from './Painting/Painting.module.css'
 
 function PaintingList({ item }) { 
   return (
-    <ul>
+    <ul className={styles.list}>
       {item.map(item => (
-        <li key={item.id}>
+        <li className={styles.item} key={item.id}>
           <Painting
-            imgUrl={item.url}
+             imgUrl={item.url}
             title={item.title}
-            authorName={item.author.tag}
-            proFileUrl={item.author.url}
+            author={item.author.tag}
+            profileUrl={item.author.url}
             price={item.price}
             quantity={item.quantity}
-          />
+           />
         </li>
       ))}
     </ul>
@@ -29,3 +29,5 @@ PaintingList.propTypes = {
 }
 
 export default PaintingList
+
+  

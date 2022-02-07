@@ -1,0 +1,19 @@
+.card {
+  width: 300px;
+  height: 420px;
+  padding: 10px;
+  background-color: aliceblue;
+  margin-top: 10px;
+}
+img {
+  display: block;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin-left: 20px;
+}
